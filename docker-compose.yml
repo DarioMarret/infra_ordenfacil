@@ -106,7 +106,7 @@ services:
       - codigomarret
 
   crond_pdf:
-    image: djmarret1992/codigobm-cron-pdf:dev_9146b96c
+    image: djmarret1992/codigobm-cron-pdf:dev_a7b7a589
     restart: always
     container_name: crond_pdf
     networks:
@@ -125,5 +125,3 @@ services:
       - 4205:3000
     volumes:
       - ./RIDES:/MS/src/public/
-    command: ["npm", "start", "--", "--security-opt", "seccomp=path/to/chrome.json"]
-    # sudo docker run --security-opt seccomp=path/to/chrome.json pupdock
