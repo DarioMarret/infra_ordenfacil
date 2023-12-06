@@ -95,3 +95,12 @@ services:
     volumes:
       - ./FIRMAS:/facturacion/scr/facturacion_electronica/Firma
       - ./COMPROBANTES:/facturacion/scr/facturacion_electronica/facturacion
+
+  platilla_rides:
+    image: djmarret1992/codigobm-plantilla-rides:dev_5688b50c
+    restart: always
+    container_name: platilla_rides
+    ports:
+      - 4031:80
+    networks:
+      - codigomarret
