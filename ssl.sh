@@ -1,6 +1,6 @@
 # borrar los archivos de certificados anteriores
-sudo rm -rf /etc/nginx/sites-available/ordenfacil.org
-sudo rm -rf /etc/nginx/sites-enabled/ordenfacil.org
+sudo rm -r /etc/nginx/sites-available/ordenfacil.org
+sudo rm -r /etc/nginx/sites-enabled/ordenfacil.org
 
 
 sudo cp default.nginx /etc/nginx/sites-available/ordenfacil.org
