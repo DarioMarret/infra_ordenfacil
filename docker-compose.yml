@@ -1,0 +1,75 @@
+version: '3.7'
+
+networks:
+  codigomarret:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:5.7.28
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=Marret123456+-*
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - codigomarret
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=mysql:3306
+      - MYSQL_ROOT_PASSWORD=Marret123456+-*
+      - UPLOAD_LIMIT=300M
+    depends_on:
+      - mysql
+    ports:
+      - 8085:80
+    networks:
+      - codigomarret
+
+  whatsapp_qr:
+    image: djmarret1992/codigobm-whatsapp-qr-api:dev_81a410a9
+    restart: always
+    container_name: whatsapp_qr
+    ports:
+      - 4203:3000
+    networks:
+      - codigomarret
+    environment:
+      - PORT=3000
+      - DEV=
+      - PROXY=/api_qr/
+      - HOST=https://ordenfacil.org
+
+  api_ordenfacil:
+    image: djmarret1992/codigobm-api-ordenfacil:dev_iUGsDmCC
+    restart: always
+    container_name: api_ordenfacil
+    ports:
+      - 4201:3000
+    networks:
+      - codigomarret
+    environment:
+      - PORT=3001
+      - DEV=developmen
+      - USER_DB=root
+      - PASSWORD_DB=Marret123456+-*
+      - DATABASE_DB=facturacion_api
+      - HOST_DB=mysql
+      - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
+
+  fromt_ordenfacil:
+    image: djmarret1992/codigobm-fromt-ordenfacil:dev_f7deef04
+    restart: always
+    container_name: fromt_ordenfacil
+    ports:
+      - 4200:80
