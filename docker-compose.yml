@@ -51,7 +51,7 @@ services:
       - HOST=https://ordenfacil.org
 
   api_ordenfacil:
-    image: djmarret1992/codigobm-api-ordenfacil:dev_iUGsDmCC
+    image: djmarret1992/codigobm-api-ordenfacil:dev_IVgjunot
     restart: always
     container_name: api_ordenfacil
     ports:
