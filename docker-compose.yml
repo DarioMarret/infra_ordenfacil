@@ -41,7 +41,7 @@ services:
     restart: always
     container_name: whatsapp_qr
     ports:
-      - 4:3000
+      - 4203:3000
     networks:
       - codigomarret
     environment:
