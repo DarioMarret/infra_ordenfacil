@@ -41,7 +41,7 @@ services:
     restart: always
     container_name: whatsapp_qr
     ports:
-      - 4203:3000
+      - 4:3000
     networks:
       - codigomarret
     environment:
@@ -79,7 +79,7 @@ services:
     restart: always
     container_name: api_facturacion
     ports:
-      - 4203:3000
+      - 4204:3000
     networks:
       - codigomarret
     environment:
