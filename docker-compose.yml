@@ -59,7 +59,7 @@ services:
     networks:
       - codigomarret
     environment:
-      - PORT=3001
+      - PORT=3000
       - DEV=developmen
       - USER_DB=root
       - PASSWORD_DB=Marret123456+-*
