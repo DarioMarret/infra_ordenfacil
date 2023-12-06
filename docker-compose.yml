@@ -124,4 +124,4 @@ services:
     ports:
       - 4205:3000
     volumes:
-      - ./RIDES:/MS/src/public/pdf/
+      - ./RIDES:/MS/src/public/
