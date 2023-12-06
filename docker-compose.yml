@@ -106,7 +106,7 @@ services:
       - codigomarret
 
   crond_pdf:
-    image: djmarret1992/codigobm-cron-pdf:dev_6f5814fc
+    image: djmarret1992/codigobm-cron-pdf:dev_b9bf0abc
     restart: always
     container_name: crond_pdf
     networks:
@@ -124,4 +124,4 @@ services:
     ports:
       - 4205:3000
     volumes:
-      - ./RIDES:/MS/src/public/
+      - ./RIDES:/src/public/
