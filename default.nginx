@@ -104,9 +104,9 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header X-Forwarded-Host  $host;
         proxy_set_header X-Forwarded-Port  $server_port;
-        proxy_pass      http://localhost:4030/;
+        proxy_pass      http://localhost:4031/;
         proxy_read_timeout      600;
-        proxy_redirect  https://localhost:4030/ https://ordenfacil.org;
+        proxy_redirect  https://localhost:4031/ https://ordenfacil.org;
 
         }
 
