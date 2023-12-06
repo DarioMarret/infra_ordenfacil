@@ -104,3 +104,22 @@ services:
       - 4031:80
     networks:
       - codigomarret
+
+  crond_pdf:
+    image: djmarret1992/codigobm-cron-pdf:dev_6ce2d70f
+    restart: always
+    container_name: crond_pdf
+    networks:
+      - codigomarret
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - DEV=development
+      - USER_DB=root
+      - PASSWORD_DB=Marret123456+-*
+      - DATABASE_DB=facturacion_api
+      - HOST_DB=mysql
+      - HOST_PDF=https://ordenfacil.org/pdf/
+      - HOST_RIDE=https://ordenfacil.org/rides/rides/
+    ports:
+      - 4205:3000
