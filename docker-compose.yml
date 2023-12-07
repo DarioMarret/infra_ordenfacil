@@ -97,7 +97,7 @@ services:
       - ./COMPROBANTES:/facturacion/scr/facturacion_electronica/facturacion
 
   platilla_rides:
-    image: djmarret1992/codigobm-plantilla-rides:dev_318e1a54
+    image: djmarret1992/codigobm-plantilla-rides:dev_e1fe56f7
     restart: always
     container_name: platilla_rides
     ports:
