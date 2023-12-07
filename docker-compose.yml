@@ -106,7 +106,7 @@ services:
       - codigomarret
 
   crond_pdf:
-    image: djmarret1992/codigobm-cron-pdf:dev_92cf1056
+    image: djmarret1992/codigobm-cron-pdf:dev_23c5ee63
     restart: always
     container_name: crond_pdf
     networks:
