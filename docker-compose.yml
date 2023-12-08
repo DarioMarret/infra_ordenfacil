@@ -142,3 +142,24 @@ services:
       - TZ=America/Guayaquil
     volumes:
       - ./backup:/BACKUP/up
+
+  upload:
+    image: djmarret1992/codigobm-api-upload:dev_zafFAhu0
+    restart: always
+    container_name: upload
+    networks:
+      - codigomarret
+    ports:
+      - 4206:4000
+    environment:
+      - PORT=4000
+      - DOMINIO=https://codigomarret.online/upload/img/
+
+  fromt_autoregistro:
+    image: djmarret1992/codigobm-autoregistro-qr:dev_32510e13
+    restart: always
+    container_name: fromt_autoregistro
+    networks:
+      - codigomarret
+    ports:
+      - 4207:80
