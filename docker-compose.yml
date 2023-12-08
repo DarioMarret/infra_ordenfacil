@@ -125,3 +125,20 @@ services:
       - 4205:3000
     volumes:
       - ./RIDES:/MS/src/public/
+
+  backup:
+    image: djmarret1992/codigobm-backup-mysql:dev_5R2BbB33
+    restart: always
+    container_name: backup
+    networks:
+      - codigomarret
+    environment:
+      - DB_USER=root
+      - DB_NAME=facturacion_api
+      - DB_PASSWORD=Marret123456+-*
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - CRON_TIME=*/30 * * * *
+      - TZ=America/Guayaquil
+    volumes:
+      - ./backup:/BACKUP/up
