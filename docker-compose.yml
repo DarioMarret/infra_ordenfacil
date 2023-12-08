@@ -127,7 +127,7 @@ services:
       - ./RIDES:/MS/src/public/
 
   backup:
-    image: djmarret1992/codigobm-backup-mysql:dev_5R2BbB33
+    image: djmarret1992/codigobm-backup-mysql:dev_w1Qjlkid
     restart: always
     container_name: backup
     networks:
@@ -138,7 +138,7 @@ services:
       - DB_PASSWORD=Marret123456+-*
       - DB_HOST=mysql
       - DB_PORT=3306
-      - CRON_TIME=*/30 * * * *
+      - CRON_TIME=* * * * *
       - TZ=America/Guayaquil
     volumes:
       - ./backup:/BACKUP/up
