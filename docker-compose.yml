@@ -75,7 +75,7 @@ services:
       - 4200:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_4MpFKltX
+    image: djmarret1992/codigobm-api-facturacion:dev_c4vQJUpZ
     restart: always
     container_name: api_facturacion
     ports:
@@ -93,8 +93,8 @@ services:
       - HOST_DB=mysql
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
-      - ./FIRMAS:/facturacion/src/facturacion_electronica/Firma
-      - ./COMPROBANTES:/facturacion/src/facturacion_electronica/facturacion
+      - ./FIRMAS:/facturacion/src
+      - ./COMPROBANTES:/facturacion/src
 
   platilla_rides:
     image: djmarret1992/codigobm-plantilla-rides:dev_7fed5c2f
