@@ -93,7 +93,7 @@ services:
       - HOST_DB=mysql
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
-      - ./COMPROBANTES:/
+      - ./COMPROBANTES:/facturacion/src
 
   platilla_rides:
     image: djmarret1992/codigobm-plantilla-rides:dev_7fed5c2f
