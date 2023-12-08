@@ -154,6 +154,8 @@ services:
     environment:
       - PORT=4000
       - DOMINIO=https://codigomarret.online/upload/img/
+    volumes:
+      - ./upload:/upload/src/public/img
 
   fromt_autoregistro:
     image: djmarret1992/codigobm-autoregistro-qr:dev_32510e13
