@@ -158,7 +158,7 @@ services:
       - ./upload:/upload/src/public/img
 
   fromt_autoregistro:
-    image: djmarret1992/codigobm-autoregistro-qr:dev_5cd3e67d
+    image: djmarret1992/codigobm-autoregistro-qr:dev_2fcdc669
     restart: always
     container_name: fromt_autoregistro
     networks:
