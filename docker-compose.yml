@@ -93,8 +93,8 @@ services:
       - HOST_DB=mysql
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
-      - ./FIRMAS:/facturacion/scr/facturacion_electronica/Firma
-      - ./COMPROBANTES:/facturacion/scr/facturacion_electronica/facturacion
+      - ./FIRMAS:/facturacion/src/facturacion_electronica/Firma
+      - ./COMPROBANTES:/facturacion/src/facturacion_electronica/facturacion
 
   platilla_rides:
     image: djmarret1992/codigobm-plantilla-rides:dev_7fed5c2f
