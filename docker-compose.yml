@@ -49,6 +49,8 @@ services:
       - DEV=
       - PROXY=/api_qr/
       - HOST=https://ordenfacil.org
+    volumes:
+      - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
   api_ordenfacil:
     image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
@@ -164,3 +166,7 @@ services:
       - codigomarret
     ports:
       - 4207:80
+
+
+volumes:
+  whatsapp_qr:
