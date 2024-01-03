@@ -77,7 +77,7 @@ services:
       - 4200:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_CAjB5AtY
+    image: djmarret1992/codigobm-api-facturacion:dev_QjuxjVRI
     restart: always
     container_name: api_facturacion
     ports:
@@ -108,7 +108,7 @@ services:
       - codigomarret
 
   crond_pdf:
-    image: djmarret1992/codigobm-cron-pdf:dev_d9c5cf77
+    image: djmarret1992/codigobm-cron-pdf:dev_ec5ca255
     restart: always
     container_name: crond_pdf
     networks:
@@ -116,7 +116,7 @@ services:
     environment:
       - PORT=3000
       - HOST=0.0.0.0
-      - DEV=development
+      - DEV=production
       - USER_DB=root
       - PASSWORD_DB=Marret123456+-*
       - DATABASE_DB=facturacion_api
