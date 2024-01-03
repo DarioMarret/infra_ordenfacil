@@ -30,7 +30,7 @@ app.listen(5100, () => {
 cron.schedule('*/5 * * * * *', async() => {
     console.log('running a task every 5 seconds');
     try {
-        const { data, status } = await axios.get(`${process.env.API_HELTCHAT}`);
+        const { data, status } = await axios.get('http://localhost:4204/hatchet');
         if(status == 200) {
             console.log(data);
         }else{
