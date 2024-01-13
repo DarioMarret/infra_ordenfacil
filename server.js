@@ -9,8 +9,6 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 
-
-
 app.use(cors());
 app.use(morgan('dev'));
 
@@ -27,8 +25,8 @@ app.listen(5100, () => {
     console.log('Server listening on port 5100');
 })
 
-cron.schedule('*/5 * * * * *', async() => {
-    console.log('running a task every 5 seconds');
+cron.schedule('*/15 * * * * *', async() => {
+    console.log('running a task every 15 seconds');
     try {
         const { data, status } = await axios.get('http://localhost:4204/hatchet');
         if(status == 200) {
