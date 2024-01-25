@@ -49,7 +49,7 @@ services:
       - DEV=
       - PROXY=/api_qr/
       - HOST=https://ordenfacil.org
-      - MI_HOST=http://localhost:3000/pdf/
+      - MT_HOST=http://localhost:3000/pdf/
     volumes:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
