@@ -37,7 +37,7 @@ services:
       - codigomarret
 
   whatsapp_qr:
-    image: djmarret1992/codigobm-whatsapp-qr-api:dev_ee7e26b0
+    image: djmarret1992/codigobm-whatsapp-qr-api:dev_d52dadfb
     restart: always
     container_name: whatsapp_qr
     ports:
