@@ -85,7 +85,7 @@ services:
       - 4300:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_1ubFlAhw
+    image: djmarret1992/codigobm-api-facturacion:dev_TTh31SHU
     restart: always
     container_name: api_facturacion
     ports:
@@ -94,7 +94,7 @@ services:
       - codigomarret
     environment:
       - PORT=3000
-      - DEV=developmen
+      - DEV=production
       - USER_DB=root
       - PASSWORD_DB=Marret123456+-*
       - DATABASE_DB=facturacion_api
