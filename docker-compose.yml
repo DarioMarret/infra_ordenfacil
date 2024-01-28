@@ -77,6 +77,13 @@ services:
     ports:
       - 4200:80
 
+  fromt_flashchat:
+    image: djmarret1992/flashchatl:dev_6192ad57
+    restart: always
+    container_name: fromt_flashchat
+    ports:
+      - 4300:80
+
   api_facturacion:
     image: djmarret1992/codigobm-api-facturacion:dev_YuFcsvHs
     restart: always
