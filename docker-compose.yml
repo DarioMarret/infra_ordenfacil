@@ -78,7 +78,7 @@ services:
       - 4200:80
 
   fromt_flashchat:
-    image: djmarret1992/flashchat:dev_8017884d
+    image: djmarret1992/flashchat:dev_21eb352e
     restart: always
     container_name: fromt_flashchat
     ports:
