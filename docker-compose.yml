@@ -49,7 +49,7 @@ services:
       - DEV=
       - PROXY=/api_qr/
       - HOST=https://ordenfacil.org
-      - MT_HOST=http://localhost:3000/pdf/
+      - MT_HOST=https://ordenfacil.org/api_qr/pdf/
     volumes:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
@@ -78,7 +78,7 @@ services:
       - 4200:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_FPegWelU
+    image: djmarret1992/codigobm-api-facturacion:dev_YuFcsvHs
     restart: always
     container_name: api_facturacion
     ports:
