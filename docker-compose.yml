@@ -71,14 +71,14 @@ services:
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
 
   fromt_ordenfacil:
-    image: djmarret1992/codigobm-fromt-ordenfacil:dev_348fee5f
+    image: djmarret1992/codigobm-fromt-ordenfacil:dev_a0218765
     restart: always
     container_name: fromt_ordenfacil
     ports:
       - 4200:80
 
   fromt_flashchat:
-    image: djmarret1992/flashchat:dev_453bdb5d
+    image: djmarret1992/flashchat:dev_348fee5f
     restart: always
     container_name: fromt_flashchat
     ports:
