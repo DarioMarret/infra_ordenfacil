@@ -154,7 +154,7 @@ services:
       - ./backup:/BACKUP/up
 
   upload:
-    image: djmarret1992/codigobm-api-upload:dev_zafFAhu0
+    image: djmarret1992/codigobm-api-upload:dev_0WGV6TpN
     restart: always
     container_name: upload
     networks:
