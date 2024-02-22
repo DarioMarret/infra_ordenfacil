@@ -193,7 +193,7 @@ services:
       - INSTANCE_USERNAME=grupotvcadmin
       - INSTANCE_PASSWORD=Andresdavid21@
       - INSTANCE_SCHEMA=shortner
-      - DOMINIO=https://codigomarret.online
+      - DOMINIO=https://codigomarret.online/link
       - PATH_KEY_HTTPS=./src/cert/crt.key
       - PATH_CERT_HTTPS=./src/cert/crt.crt
 
