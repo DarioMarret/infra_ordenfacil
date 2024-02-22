@@ -182,7 +182,7 @@ services:
     restart: always
     container_name: acortador_link
     ports:
-      - 4202:3000
+      - 4208:8080
     networks:
       - codigomarret
     environment:
