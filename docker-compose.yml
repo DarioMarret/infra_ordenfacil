@@ -37,7 +37,7 @@ services:
       - codigomarret
 
   whatsapp_qr:
-    image: djmarret1992/codigobm-whatsapp-qr-api:dev_3804359c
+    image: djmarret1992/codigobm-whatsapp-qr-api:dev_a3d3e861
     restart: always
     container_name: whatsapp_qr
     ports:
@@ -52,6 +52,7 @@ services:
       - MT_HOST=https://ordenfacil.org/api_qr/pdf/
     volumes:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
+
 
   api_ordenfacil:
     image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
@@ -103,7 +104,7 @@ services:
       - HOST_DB=mysql
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
-      - ./facturacion:/facturacion/src/facturacion_electronica/facturacion/Firmado/
+      # - ./facturacion:/facturacion/src/facturacion_electronica/facturacion/Firmado/
       - ./firma:/facturacion/src/facturacion_electronica/Firma/
 
   platilla_rides:
@@ -175,6 +176,27 @@ services:
       - codigomarret
     ports:
       - 4207:80
+
+  acortador_link:
+    image: djmarret1992/codigobm-acortador-link:v1.4
+    restart: always
+    container_name: acortador_link
+    ports:
+      - 4202:3000
+    networks:
+      - codigomarret
+    environment:
+      - PORT=8080
+      - BASIC_USER=xtrim-link
+      - BASIC_PASS=Xtrim*EC2022
+      - INSTANCE_URL=https://produccion-tvcable.harperdbcloud.com
+      - INSTANCE_USERNAME=grupotvcadmin
+      - INSTANCE_PASSWORD=Andresdavid21@
+      - INSTANCE_SCHEMA=shortner
+      - DOMINIO=https://codigomarret.online
+      - PATH_KEY_HTTPS=./src/cert/crt.key
+      - PATH_CERT_HTTPS=./src/cert/crt.crt
+
 
 
 volumes:
