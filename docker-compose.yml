@@ -86,7 +86,7 @@ services:
       - 4300:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_0OxM7dRn
+    image: djmarret1992/codigobm-api-facturacion:dev_6H1zNomR
     restart: always
     container_name: api_facturacion
     ports:
@@ -178,7 +178,7 @@ services:
       - 4207:80
 
   acortador_link:
-    image: djmarret1992/codigobm-acortador-link:v1.5
+    image: djmarret1992/codigobm-acortador-link:v1.6
     restart: always
     container_name: acortador_link
     ports:
