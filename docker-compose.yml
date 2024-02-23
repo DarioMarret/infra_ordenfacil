@@ -86,7 +86,7 @@ services:
       - 4300:80
 
   api_facturacion:
-    image: djmarret1992/codigobm-api-facturacion:dev_6H1zNomR
+    image: djmarret1992/codigobm-api-facturacion:dev_5HUgHH6K
     restart: always
     container_name: api_facturacion
     ports:
