@@ -199,7 +199,7 @@ services:
       - 4207:80
 
   acortador_link:
-    image: djmarret1992/codigobm-acortador-link:v1.6
+    image: djmarret1992/codigobm-acortador-link:v1.7
     restart: always
     container_name: acortador_link
     ports:
