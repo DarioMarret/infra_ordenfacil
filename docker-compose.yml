@@ -217,6 +217,7 @@ services:
       - DOMINIO=https://codigomarret.online/link
       - PATH_KEY_HTTPS=./src/cert/crt.key
       - PATH_CERT_HTTPS=./src/cert/crt.crt
+      - DATABASE_URL=mysql://root:Marret123456+-*@161.35.138.208:3382/cortadorlink?schema=public&connection_limit=500&pool_timeout=30
 
 
 
