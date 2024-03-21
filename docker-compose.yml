@@ -53,7 +53,6 @@ services:
     volumes:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
-
   api_ordenfacil:
     image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
     restart: always
@@ -109,7 +108,7 @@ services:
       - ./firma:/facturacion/src/facturacion_electronica/Firma/
 
   cron_facturacion:
-    image: djmarret1992/codigobm-cron-factura-emite:dev_U3hBx7FY
+    image: djmarret1992/codigobm-cron-factura-emite:dev_7R1ZGKjs
     restart: always
     container_name: cron_facturacion
     networks:
