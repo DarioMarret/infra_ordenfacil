@@ -108,7 +108,7 @@ services:
       - ./firma:/facturacion/src/facturacion_electronica/Firma/
 
   cron_facturacion:
-    image: djmarret1992/codigobm-cron-factura-emite:dev_7R1ZGKjs
+    image: djmarret1992/codigobm-cron-factura-emite:dev_Y4SeBAob
     restart: always
     container_name: cron_facturacion
     networks:
