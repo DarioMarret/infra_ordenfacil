@@ -1,0 +1,46 @@
+{
+  "infoTributaria": {
+    "ambiente": "2",
+    "tipoEmision": "1",
+    "razonSocial": "DARIO MARRET MEDRANDA",
+    "nombreComercial": "LUVNOVEN",
+    "ruc": "0927177345001",
+    "claveAcceso": "0104202401092717734500120030010000064731234567819",
+    "codDoc": "01",
+    "estab": "003",
+    "ptoEmi": "001",
+    "secuencial": "000006473",
+    "dirMatriz": "Malecon S/N y Ruminahu"
+  },
+  "infoFactura": {
+    "fechaEmision": "01/04/2024",
+    "dirEstablecimiento": "Salinas",
+    "obligadoContabilidad": "NO",
+    "tipoIdentificacionComprador": "07",
+    "razonSocialComprador": "CONSUMIDOR FINAL",
+    "identificacionComprador": "9999999999999",
+    "direccionComprador": "salinas",
+    "totalSinImpuestos": "7.95",
+    "totalDescuento": "0.00",
+    "totalConImpuestos": {
+      "totalImpuesto": [
+        {
+          "codigo": "2",
+          "codigoPorcentaje": "2",
+          "baseImponible": "7.95",
+          "valor": "1.38"
+        },
+        {
+          "codigo": "2",
+          "codigoPorcentaje": "0",
+          "baseImponible": "0",
+          "valor": "0"
+        }
+      ]
+    },
+    "propina": "0.00",
+    "importeTotal": "9.33",
+    "moneda": "DOLAR"
+  },
+  "detalles": { "detalle": [] }
+}
