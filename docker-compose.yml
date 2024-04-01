@@ -71,7 +71,7 @@ services:
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
 
   fromt_ordenfacil:
-    image: djmarret1992/codigobm-fromt-ordenfacil:dev_f94cbbff
+    image: djmarret1992/codigobm-fromt-ordenfacil:dev_df3ce1b3
     restart: always
     container_name: fromt_ordenfacil
     ports:
