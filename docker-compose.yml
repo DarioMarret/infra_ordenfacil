@@ -128,7 +128,7 @@ services:
       - ./firma:/facturacion/src/facturacion_electronica/Firma/
 
   platilla_rides:
-    image: djmarret1992/codigobm-plantilla-rides:dev_7fed5c2f
+    image: djmarret1992/codigobm-plantilla-rides:dev_88090831
     restart: always
     container_name: platilla_rides
     ports:
