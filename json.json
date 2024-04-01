@@ -5,11 +5,11 @@
     "razonSocial": "DARIO MARRET MEDRANDA",
     "nombreComercial": "LUVNOVEN",
     "ruc": "0927177345001",
-    "claveAcceso": "0104202401092717734500120030010000064731234567819",
+    "claveAcceso": "0104202401092717734500120030010000064751234567811",
     "codDoc": "01",
     "estab": "003",
     "ptoEmi": "001",
-    "secuencial": "000006473",
+    "secuencial": "000006475",
     "dirMatriz": "Malecon S/N y Ruminahu"
   },
   "infoFactura": {
@@ -20,15 +20,15 @@
     "razonSocialComprador": "CONSUMIDOR FINAL",
     "identificacionComprador": "9999999999999",
     "direccionComprador": "salinas",
-    "totalSinImpuestos": "7.95",
+    "totalSinImpuestos": "9.00",
     "totalDescuento": "0.00",
     "totalConImpuestos": {
       "totalImpuesto": [
         {
           "codigo": "2",
           "codigoPorcentaje": "2",
-          "baseImponible": "7.95",
-          "valor": "1.38"
+          "baseImponible": "9",
+          "valor": "1.35"
         },
         {
           "codigo": "2",
@@ -39,7 +39,7 @@
       ]
     },
     "propina": "0.00",
-    "importeTotal": "9.33",
+    "importeTotal": "10.35",
     "moneda": "DOLAR"
   },
   "detalles": { "detalle": [] }
