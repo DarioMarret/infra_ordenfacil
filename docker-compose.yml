@@ -54,7 +54,7 @@ services:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
   api_ordenfacil:
-    image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
+    image: djmarret1992/codigobm-api-ordenfacil:dev_WsOjd7wE
     restart: always
     container_name: api_ordenfacil
     ports:
@@ -198,7 +198,7 @@ services:
       - 4207:80
 
   acortador_link:
-    image: djmarret1992/codigobm-acortador-link:v1.7
+    image: djmarret1992/codigobm-acortador-link:v1.8
     restart: always
     container_name: acortador_link
     ports:
