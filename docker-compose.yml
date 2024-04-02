@@ -54,7 +54,7 @@ services:
       - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
   api_ordenfacil:
-    image: djmarret1992/codigobm-api-ordenfacil:dev_WsOjd7wE
+    image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
     restart: always
     container_name: api_ordenfacil
     ports:
@@ -175,7 +175,7 @@ services:
       - ./backup:/BACKUP/up
 
   upload:
-    image: djmarret1992/codigobm-api-upload:dev_jYxZYg8N
+    image: djmarret1992/codigobm-api-upload:dev_WsOjd7wE
     restart: always
     container_name: upload
     networks:
