@@ -3,7 +3,7 @@ networks:
     driver: bridge
 
 services:
-  mysql:
+  mysql_odenfacil:
     image: mysql:5.7.28
     container_name: mysql_odenfacil
     restart: always
@@ -24,9 +24,9 @@ services:
     container_name: phpmyadmin
     restart: always
     environment:
-      - PMA_HOST=mysql_odenfacil:3306
+      - PMA_HOST=mysql_odenfacil
       - MYSQL_ROOT_PASSWORD=Marret123456+-*
-      - UPLOAD_LIMIT=300M
+      - UPLOAD_LIMIT=800M
     depends_on:
       - mysql_odenfacil
     ports:
