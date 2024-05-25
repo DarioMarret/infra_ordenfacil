@@ -7,7 +7,7 @@ networks:
 services:
   mysql:
     image: mysql:5.7.28
-    container_name: mysql
+    container_name: mysql_odenfacil
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=Marret123456+-*
@@ -26,11 +26,11 @@ services:
     container_name: phpmyadmin
     restart: always
     environment:
-      - PMA_HOST=mysql:3306
+      - PMA_HOST=mysql_odenfacil:3306
       - MYSQL_ROOT_PASSWORD=Marret123456+-*
       - UPLOAD_LIMIT=300M
     depends_on:
-      - mysql
+      - mysql_odenfacil
     ports:
       - 8085:80
     networks:
@@ -67,7 +67,7 @@ services:
       - USER_DB=root
       - PASSWORD_DB=Marret123456+-*
       - DATABASE_DB=facturacion_api
-      - HOST_DB=mysql
+      - HOST_DB=mysql_odenfacil
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
 
   fromt_ordenfacil:
@@ -94,7 +94,7 @@ services:
       - DATABASE_DB=facturacion_api
       - USER_EMAIL=facturacion@ordenfacil.org
       - PASSWORD_EMAIL=facturacion*2023
-      - HOST_DB=mysql
+      - HOST_DB=mysql_odenfacil
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
       # - ./facturacion:/facturacion/src/facturacion_electronica/facturacion/Firmado/
@@ -114,7 +114,7 @@ services:
       - DATABASE_DB=facturacion_api
       - USER_EMAIL=facturacion@ordenfacil.org
       - PASSWORD_EMAIL=facturacion*2023
-      - HOST_DB=mysql
+      - HOST_DB=mysql_odenfacil
       - SECRET=awhgedcnqerucvqiuebciqebcdqwygcqucqwejxgq3yrcbq3ce1iyexiqkwjebcq
     volumes:
       # - ./facturacion:/facturacion/src/facturacion_electronica/facturacion/Firmado/
@@ -142,7 +142,7 @@ services:
       - USER_DB=root
       - PASSWORD_DB=Marret123456+-*
       - DATABASE_DB=facturacion_api
-      - HOST_DB=mysql
+      - HOST_DB=mysql_odenfacil
       - HOST_PDF=https://ordenfacil.org/pdf/
       - HOST_RIDE=https://ordenfacil.org/rides/rides/
     ports:
@@ -160,7 +160,7 @@ services:
       - DB_USER=root
       - DB_NAME=facturacion_api
       - DB_PASSWORD=Marret123456+-*
-      - DB_HOST=mysql
+      - DB_HOST=mysql_odenfacil
       - DB_PORT=3306
       - CRON_TIME=59 */5 * * * *
       - TZ=America/Guayaquil
@@ -209,7 +209,7 @@ services:
       - DOMINIO=https://codigomarret.online/link
       - PATH_KEY_HTTPS=./src/cert/crt.key
       - PATH_CERT_HTTPS=./src/cert/crt.crt
-      - DATABASE_URL=mysql://root:Marret123456+-*@161.35.138.208:3382/cortadorlink?schema=public&connection_limit=500&pool_timeout=30
+      - DATABASE_URL=mysql://root:Marret123456+-*@177.234.194.62:3382/cortadorlink?schema=public&connection_limit=500&pool_timeout=30
 
 
 
