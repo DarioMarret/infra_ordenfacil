@@ -36,22 +36,22 @@ services:
     networks:
       - codigomarret
 
-  whatsapp_qr:
-    image: djmarret1992/codigobm-whatsapp-qr-api:dev_a3d3e861
-    restart: always
-    container_name: whatsapp_qr
-    ports:
-      - 4203:3000
-    networks:
-      - codigomarret
-    environment:
-      - PORT=3000
-      - DEV=
-      - PROXY=/api_qr/
-      - HOST=https://ordenfacil.org
-      - MT_HOST=https://ordenfacil.org/api_qr/pdf/
-    volumes:
-      - whatsapp_qr:/WhatsappQr/auth_info_baileys
+  # whatsapp_qr:
+  #   image: djmarret1992/codigobm-whatsapp-qr-api:dev_a3d3e861
+  #   restart: always
+  #   container_name: whatsapp_qr
+  #   ports:
+  #     - 4203:3000
+  #   networks:
+  #     - codigomarret
+  #   environment:
+  #     - PORT=3000
+  #     - DEV=
+  #     - PROXY=/api_qr/
+  #     - HOST=https://ordenfacil.org
+  #     - MT_HOST=https://ordenfacil.org/api_qr/pdf/
+  #   volumes:
+  #     - whatsapp_qr:/WhatsappQr/auth_info_baileys
 
   api_ordenfacil:
     image: djmarret1992/codigobm-api-ordenfacil:dev_Bypgiepw
@@ -77,14 +77,6 @@ services:
     container_name: fromt_ordenfacil
     ports:
       - 4200:80
-
-  fromt_flashchat:
-    # image: djmarret1992/flashchat:dev_ab62a3ff
-    image: djmarret1992/flashchat:dev_5468097f
-    restart: always
-    container_name: fromt_flashchat
-    ports:
-      - 4300:80
 
   api_facturacion:
     image: djmarret1992/codigobm-api-facturacion:dev_SzkStcLj
@@ -221,5 +213,5 @@ services:
 
 
 
-volumes:
-  whatsapp_qr:
+# volumes:
+#   whatsapp_qr:
