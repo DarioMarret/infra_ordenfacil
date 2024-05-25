@@ -70,7 +70,7 @@ services:
 
   fromt_ordenfacil:
     # image: djmarret1992/codigobm-fromt-ordenfacil:dev_829bcc88
-    image: djmarret1992/codigobm-fromt-ordenfacil:dev_03ad226e
+    image: djmarret1992/codigobm-fromt-ordenfacil:dev_e3dd2fea
     restart: always
     container_name: fromt_ordenfacil
     ports:
