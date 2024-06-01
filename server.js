@@ -16,35 +16,31 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 
-app.post('/api_docker/list', (req, res) => {
+app.post('/repo_deploy', (req, res) => {
     console.log(req.body);
-    res.json(req.body);
+    const { repo_url, branch } = req.body;
+    console.log('repo_url', repo_url);
+    console.log('branch', branch);
+    exec(`git pull origin ${branch}`, (err, stdout, stderr) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send(err);
+        }
+        console.log(stdout);
+        console.log('Deploying...');
+        exec('docker-compose up -d', (err, stdout, stderr) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send(err);
+            }
+            console.log(stdout);
+            console.log('Deployed successfully');
+            return res.status(200).send('OK');
+        })
+    })
+    res.status(200).send('OK');
 })
 
 app.listen(5100, () => {
     console.log('Server listening on port 5100');
 })
-
-cron.schedule('*/15 * * * * *', async() => {
-    console.log('running a task every 15 seconds');
-    try {
-        const { data, status } = await axios.get('http://localhost:4204/hatchet');
-        if(status == 200) {
-            console.log(data);
-        }else{
-            // restart docker container api_facturacion
-            exec('docker restart api_facturacion', (err, stdout, stderr) => {
-                if (err) {
-                    // node couldn't execute the command
-                    console.log(err);
-                    return;
-                }
-                // the *entire* stdout and stderr (buffered)
-                console.log(`stdout: ${stdout}`);
-                console.log(`stderr: ${stderr}`);
-            });
-        }
-    } catch (error) {
-        console.log(error);
-    }
-});
